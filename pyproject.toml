@@ -1,5 +1,5 @@
 [project]
-name = "binary-classification-diabetes"
+name = "prediction_diabetes"
 version = "0.1.0"
 description = ""
 authors = [
