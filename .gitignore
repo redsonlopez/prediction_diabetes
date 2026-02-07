@@ -1,2 +1,10 @@
+# Arquivos de notebook Jupyter e Vim
 .ipynb_checkpoints/
+.ipynb_cache/
+*~
+
+# Ambiente virtual e arquivos de cache
+.venv/
+*.pyc
+*.pyo
 __pycache__/
