@@ -1,10 +1,48 @@
-# Arquivos de notebook Jupyter e Vim
-.ipynb_checkpoints/
+# === NOTEBOOKS ===
+**/.ipynb_checkpoints
+*.ipynb~
+*.nbconvert.ipynb
+.jupyter/lab/workspaces/
 .ipynb_cache/
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.pyd
+*.so
+*.egg
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+
+# === TESTING AND COVERAGE ===
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# === POETRY / VENV ===
+.venv/
+venv/
+
+# === VS CODE ===
+.vscode/
+
+# === VIM / NEOVIM ===
+*.swp
+*.swo
+*.un~
+.session
+.netrwhist
+tags
 *~
 
-# Ambiente virtual e arquivos de cache
-.venv/
-*.pyc
-*.pyo
-__pycache__/
+# === MLflow ===
+mlruns/
