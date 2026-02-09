@@ -9,3 +9,9 @@ predictor = DiabetesPredictor()
 @app.post("/predict")
 def predict(data: DiabetesInput):
     return predictor.predict(data.dict())
+
+
+@app.get("/")
+def health_check():
+    return {"status": "ok", "model": "logistic_diabetes"}
+
