@@ -8,12 +8,6 @@ Esse projeto tem como objetivo desenvolver um modelo de classificação para pre
 Link para acesso a API:
 https://prediction-diabetes-wc45.onrender.com/docs
 
-### Executar localmente
-
-```bash
-poetry install
-poetry run uvicorn prediction_diabetes.api.main:app --reload
-
 ## Tecnologias Utilizadas
 
 - Python
@@ -31,4 +25,10 @@ Próximos passos planejados:
 - CI/CD com GitHub Actions
 - Versionamento de modelos
 - Monitoramento e validação de dados
+
+### Executar localmente
+
+```bash
+poetry install
+poetry run uvicorn prediction_diabetes.api.main:app --reload
 
