@@ -1,7 +1,10 @@
 import joblib
 import pandas as pd
+from pathlib import Path
 
-MODEL_PATH = "models/logistic_diabetes.pkl"
+BASE_DIR = Path(__file__).resolve().parents[3]
+MODEL_PATH = BASE_DIR / "models" / "logistic_diabetes.pkl"
+
 
 class DiabetesPredictor:
     def __init__(self):
