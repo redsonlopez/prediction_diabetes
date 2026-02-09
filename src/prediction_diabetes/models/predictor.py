@@ -1,4 +1,3 @@
-# models/predictor.py
 import joblib
 import pandas as pd
 
@@ -17,3 +16,4 @@ class DiabetesPredictor:
             "prediction": pred,
             "probability": prob
         }
+
