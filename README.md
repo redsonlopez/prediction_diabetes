@@ -2,7 +2,7 @@
 
 Projeto de Machine Learning para previsão de diabetes, com pipeline estruturado, treinamento de modelo e disponibilização via API.
 <blockquote>
-Esse projeto tem como objetivo desenvolver um modelo de classificação para prever a ocorrência de diabetes a partir de dados clínicos, aplicando boas práticas de organização de código e conceitos de MLOps.
+Esse projeto tem como objetivo desenvolver um modelo de classificação para prever a ocorrência de diabetes a partir de dados clínicos.
 </blockquote>
 
 Link para acesso a API:
