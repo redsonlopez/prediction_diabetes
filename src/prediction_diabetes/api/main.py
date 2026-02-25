@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from prediction_diabetes.models.predictor import DiabetesPredictor
+
+from prediction_diabetes.inference.predictor import DiabetesPredictor
 from prediction_diabetes.api.schemas import DiabetesInput
 
 app = FastAPI(title="Diabetes Prediction API")

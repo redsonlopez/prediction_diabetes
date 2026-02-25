@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
 
-from prediction_diabetes.features.build_features import create_pipeline
+from prediction_diabetes.models.model_pipeline.py import create_pipeline
 from prediction_diabetes.config import (
     FEATURE_COLUMNS,
     TARGET_COLUMN,

@@ -11,5 +11,5 @@ TARGET_COLUMN = "diabetes"
 
 RAW_DATA_PATH = "data/raw/diabetes.csv"
 PROCESSED_DATA_PATH = "data/processed/features_diabetes.csv"
-MODEL_PATH = "models/logistic_diabetes.pkl"
+MODEL_PATH = "artifacts/logistic_diabetes.pkl"
 
