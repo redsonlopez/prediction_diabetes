@@ -25,6 +25,10 @@ Próximos passos planejados:
 - CI/CD com GitHub Actions
 - Versionamento de modelos
 - Monitoramento e validação de dados
+- Testes automatizados com pytest
+- Logging estruturado
+- CLI para execução de pipelines
+- Makefile para padronização de comandos
 
 ### Executar localmente
 
