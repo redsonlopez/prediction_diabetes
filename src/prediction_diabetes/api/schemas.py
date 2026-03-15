@@ -4,10 +4,9 @@ from prediction_diabetes.config import FEATURE_COLUMNS
 
 
 class DiabetesInput(BaseModel):
-    HbA1c_level: float = Field(..., example=6.5)
-    blood_glucose_level: float = Field(..., example=140)
-    age: int = Field(..., example=45)
-    bmi: float = Field(..., example=27.3)
-    hypertension: int = Field(..., example=0)
-    smoking_history_mapped: int = Field(..., example=2)
+    age: int = Field(..., example=48)
+    physical_activity_minutes_per_week: int = Field(..., example=143)
+    diet_score: float = Field(..., example=6.7)
+    screen_time_hours_per_day: float = Field(..., example=8.7)
+    bmi: float = Field(..., example=23.1)
 

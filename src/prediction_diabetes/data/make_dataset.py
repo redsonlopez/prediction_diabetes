@@ -9,15 +9,6 @@ from prediction_diabetes.config import (
     PROCESSED_DATA_PATH,
 )
 
-SMOKING_MAP = {
-    "No Info": 0,
-    "never": 1,
-    "not current": 2,
-    "former": 3,
-    "ever": 3,
-    "current": 4,
-}
-
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -27,33 +18,6 @@ logging.basicConfig(
 def load_raw_data(path: str) -> pd.DataFrame:
     logging.info("Loading raw data")
     return pd.read_csv(path)
-
-
-def map_smoking_history(df: pd.DataFrame) -> pd.DataFrame:
-    logging.info("Mapping smoking_history")
-
-    df = df.copy()
-    df["smoking_history"] = df["smoking_history"].map(SMOKING_MAP)
-
-    if df["smoking_history"].isna().any():
-        raise ValueError("UNEXPECTED VALUES IN smoking_history")
-
-    df.rename(
-        columns={"smoking_history": "smoking_history_mapped"},
-        inplace=True,
-    )
-    return df
-
-
-def encode_gender(df: pd.DataFrame) -> pd.DataFrame:
-    logging.info("Applying one-hot encoding to gender")
-
-    return pd.get_dummies(
-        df,
-        columns=["gender"],
-        drop_first=True,
-        dtype=int,
-    )
 
 
 def select_features_and_target(
@@ -69,7 +33,7 @@ def select_features_and_target(
     if missing:
         raise ValueError(f"Missing columns in dataset: {missing}")
 
-    return df[features + [target]]
+    return df[features + [target]].copy()
 
 
 def save_processed_data(df: pd.DataFrame, path: str) -> None:
@@ -83,8 +47,6 @@ def build_dataset() -> None:
     logging.info("Starting dataset build")
 
     df = load_raw_data(RAW_DATA_PATH)
-    df = map_smoking_history(df)
-    df = encode_gender(df)
 
     df = select_features_and_target(
         df,

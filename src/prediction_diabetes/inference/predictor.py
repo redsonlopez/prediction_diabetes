@@ -2,7 +2,11 @@ import joblib
 import pandas as pd
 from pathlib import Path
 
-from prediction_diabetes.config import MODEL_PATH, FEATURE_COLUMNS
+from prediction_diabetes.config import (
+    MODEL_PATH,
+    FEATURE_COLUMNS,
+    DECISION_THRESHOLD
+)
 
 BASE_DIR = Path(__file__).resolve().parents[3]
 MODEL_FULL_PATH = BASE_DIR / MODEL_PATH
@@ -17,7 +21,7 @@ class DiabetesPredictor:
         df = df[FEATURE_COLUMNS]
 
         prob = self.model.predict_proba(df)[0][1]
-        pred = int(prob >= 0.5)
+        pred = int(prob >= DECISION_THRESHOLD)
 
         return {
             "prediction": pred,
