@@ -7,10 +7,13 @@
 - Poetry
 
 ### Registro dos Modelos
-- Pickle (ou MLFlow)
+- Pickle
 
 ### Make file
 - Makefile
+
+### Avaliação do Modelo
+- evaluate.py
 
 ### Teste automatizado do modelo
 - Pytest
@@ -28,7 +31,7 @@
 - Github Actions
 
 ### Instancia do Modelo
-- Render (ou Azure)
+- Render
 
 ### Teste de carga
 - Locust
