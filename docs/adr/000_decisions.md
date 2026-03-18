@@ -10,9 +10,7 @@
 - Pickle (ou MLFlow)
 
 ### Make file
-python src/prediction_diabetes/data/make_dataset.py
-python src/prediction_diabetes/models/train.py
-poetry run uvicorn prediction_diabetes.api.main:app --reload
+- Makefile
 
 ### Teste automatizado do modelo
 - Pytest
