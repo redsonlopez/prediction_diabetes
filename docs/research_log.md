@@ -6,6 +6,9 @@
 - IQR aplicado, porém os valores detectados como outliers estão dentro de causas possíveis.
 - A remoção deles pode diminuir o poder preditivo.
 
+## 14/03/2026 - Teste XGBoost
+
+- Modelos baseados em árvores não apresentaram ganho significativo em relação à regressão logística, sugerindo que as relações entre as variáveis e o desfecho são predominantemente lineares.
 
 ## 28/02/2026 - EDA
 
