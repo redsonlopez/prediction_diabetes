@@ -9,29 +9,35 @@
 ### Registro dos Modelos
 - Pickle
 
+### Avaliação do Modelo
+- evaluate.py
+
+### API
+- Fast API
+
 ### Make file
 - Makefile
 
-### Avaliação do Modelo
-- evaluate.py
+### Instancia do Modelo
+- Render
+
+
+## Tasks:
 
 ### Teste automatizado do modelo
 - Pytest
 
+### Versionamento dos dados
+- DVC
+
 ### Data Drift
 - Evidently
-
-### API
-- Fast API
 
 ### Conteinerização
 - Docker
 
 ### CI/CD
 - Github Actions
-
-### Instancia do Modelo
-- Render
 
 ### Teste de carga
 - Locust
