@@ -16,7 +16,7 @@ TRAIN_DATA_PATH = "data/processed/train.csv"
 TEST_DATA_PATH = "data/processed/test.csv"
 MODEL_LATEST_PATH = "artifacts/model.pkl"
 MODEL_VERSIONED_PATH = f"artifacts/models/model_{timestamp}.pkl"
-METRICS_PATH = f"artifacts/metrics_{timestamp}.json"
+METRICS_PATH = f"artifacts/metrics/metrics_{timestamp}.json"
 
 DECISION_THRESHOLD = 0.3
 TEST_SIZE = 0.2
