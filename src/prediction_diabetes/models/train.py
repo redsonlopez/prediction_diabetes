@@ -5,13 +5,14 @@ from prediction_diabetes.models.model_pipeline import create_pipeline
 from prediction_diabetes.config import (
     FEATURE_COLUMNS,
     TARGET_COLUMN,
-    PROCESSED_DATA_PATH,
-    MODEL_PATH,
+    TRAIN_DATA_PATH,
+    MODEL_LATEST_PATH,
+    MODEL_VERSIONED_PATH
 )
 
 
 def train() -> None:
-    df = pd.read_csv(PROCESSED_DATA_PATH)
+    df = pd.read_csv(TRAIN_DATA_PATH)
 
     required = set(FEATURE_COLUMNS + [TARGET_COLUMN])
     missing = required - set(df.columns)
@@ -24,7 +25,8 @@ def train() -> None:
     pipeline = create_pipeline()
     pipeline.fit(X, y)
 
-    joblib.dump(pipeline, MODEL_PATH)
+    joblib.dump(pipeline, MODEL_LATEST_PATH)
+    joblib.dump(pipeline, MODEL_VERSIONED_PATH)
 
 
 if __name__ == "__main__":

@@ -1,3 +1,7 @@
+import pandas as pd
+
+timestamp = pd.Timestamp.now().date()
+
 FEATURE_COLUMNS = [
     "age",
     "physical_activity_minutes_per_week",
@@ -5,12 +9,16 @@ FEATURE_COLUMNS = [
     "screen_time_hours_per_day",
     "bmi"
 ]
-
 TARGET_COLUMN = "diagnosed_diabetes"
 
-DECISION_THRESHOLD = 0.30
-
 RAW_DATA_PATH = "data/raw/diabetes_health_indicators.csv"
-PROCESSED_DATA_PATH = "data/processed/features_diabetes.csv"
-MODEL_PATH = "artifacts/logistic_diabetes.pkl"
+TRAIN_DATA_PATH = "data/processed/train.csv"
+TEST_DATA_PATH = "data/processed/test.csv"
+MODEL_LATEST_PATH = "artifacts/model.pkl"
+MODEL_VERSIONED_PATH = f"artifacts/models/model_{timestamp}.pkl"
+METRICS_PATH = f"artifacts/metrics_{timestamp}.json"
+
+DECISION_THRESHOLD = 0.3
+TEST_SIZE = 0.2
+RANDOM_STATE = 42
 

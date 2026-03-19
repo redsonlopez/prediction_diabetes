@@ -3,13 +3,13 @@ import pandas as pd
 from pathlib import Path
 
 from prediction_diabetes.config import (
-    MODEL_PATH,
+    MODEL_LATEST_PATH,
     FEATURE_COLUMNS,
     DECISION_THRESHOLD
 )
 
 BASE_DIR = Path(__file__).resolve().parents[3]
-MODEL_FULL_PATH = BASE_DIR / MODEL_PATH
+MODEL_FULL_PATH = BASE_DIR / MODEL_LATEST_PATH
 
 
 class DiabetesPredictor:
